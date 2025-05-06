@@ -6,7 +6,7 @@ const LearningHub = () => {
     <section
       className="learninghub-section"
       style={{
-        backgroundImage: 'url("/images/learninghub_banner.png")',
+        backgroundImage: 'url("./images/learninghub_banner.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

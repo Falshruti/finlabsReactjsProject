@@ -5,7 +5,7 @@ const JoinTeam = () => {
   return (
     <section className="join-team-section" 
       style={{
-        backgroundImage: 'url("/images/jointeam.webp")',
+        backgroundImage: 'url("./images/jointeam.webp")',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
