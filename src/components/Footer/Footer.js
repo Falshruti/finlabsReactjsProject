@@ -8,7 +8,7 @@ const Footer = () => {
       {/* Main footer content */}
       {/* Logo Section */}
         <div className="footer-logo-section">
-          <img src="./images/finlabs-logo.webp" alt="Finlabs Logo" />
+          <img src="./images/Finlabs-logo.webp" alt="Finlabs Logo" />
         </div>
       <div className="footer-main">
         <div className="container">
