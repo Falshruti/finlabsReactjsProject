@@ -19,7 +19,7 @@ const Header = () => {
       </div>
       <div className="main-header">
         <div className="logo">
-          <img src="/images/logo.png" alt="FinLabs India Logo" />
+          <img src="finlabsReactjsProject/images/logo.png" alt="FinLabs India Logo" />
           {/* <span>finlabs</span> */}
         </div>
         <nav className="nav-links">
