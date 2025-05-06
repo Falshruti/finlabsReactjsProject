@@ -19,8 +19,7 @@ const Header = () => {
       </div>
       <div className="main-header">
         <div className="logo">
-          <img src="/images/logo.png" alt="FinLabs India Logo" />
-          {/* <span>finlabs</span> */}
+          <img src="images/logo.png" alt="FinLabs India Logo" />
         </div>
         <nav className="nav-links">
           <div className="dropdown">Products &#9662;</div>
