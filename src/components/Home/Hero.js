@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 
 const images = [
-  '/images/slide1.webp',
-  '/images/slide2.webp',
-  '/images/slide3.webp'
+  './images/slide1.webp',
+  './images/slide2.webp',
+  './images/slide3.webp'
 ];
 
 const Hero = () => {
