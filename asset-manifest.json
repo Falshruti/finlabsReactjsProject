@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/finlabsReactjsProject/static/css/main.19df4425.css",
-    "main.js": "/finlabsReactjsProject/static/js/main.c19fccf5.js",
+    "main.js": "/finlabsReactjsProject/static/js/main.25c5747c.js",
     "static/media/fa-solid-900.ttf": "/finlabsReactjsProject/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/fa-brands-400.ttf": "/finlabsReactjsProject/static/media/fa-brands-400.1815e00441357e01619e.ttf",
     "static/media/fa-solid-900.woff2": "/finlabsReactjsProject/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
@@ -16,10 +16,10 @@
     "static/media/slick.woff": "/finlabsReactjsProject/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/finlabsReactjsProject/index.html",
     "main.19df4425.css.map": "/finlabsReactjsProject/static/css/main.19df4425.css.map",
-    "main.c19fccf5.js.map": "/finlabsReactjsProject/static/js/main.c19fccf5.js.map"
+    "main.25c5747c.js.map": "/finlabsReactjsProject/static/js/main.25c5747c.js.map"
   },
   "entrypoints": [
     "static/css/main.19df4425.css",
-    "static/js/main.c19fccf5.js"
+    "static/js/main.25c5747c.js"
   ]
 }
