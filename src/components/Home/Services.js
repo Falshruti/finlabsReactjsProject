@@ -6,8 +6,34 @@ const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
 
+<<<<<<< HEAD
 const app = express();
 const PORT = process.env.PORT || 5000;
+=======
+const offerings = [
+  {
+    icon: "./images/services-icon/1.webp",
+    title: "Products",
+    description:
+      "Explore a range of innovative financial tools designed to streamline your operations and maximize growth.",
+    buttonText: "Browse Our Products",
+  },
+  {
+    icon: "./images/services-icon/2.webp",
+    title: "Solutions",
+    description:
+      "Our tailored solutions empower you to solve complex problems and achieve your unique goals.",
+    buttonText: "Find Your Solution",
+  },
+  {
+    icon: "./images/services-icon/3.webp",
+    title: "Services",
+    description:
+      "Leverage our specialized services to tackle challenges, improve efficiency, and drive results.",
+    buttonText: "Discover Our Services",
+  },
+];
+>>>>>>> 74a785296173a478e8d200e132caa33618d68be7
 
 let leads = [];
 

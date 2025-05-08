@@ -19,7 +19,12 @@ const Header = () => {
       </div>
       <div className="main-header">
         <div className="logo">
+<<<<<<< HEAD
           <img src="./images/logo.png" alt="FinLabs India Logo" />
+=======
+          <img src="/finlabsReactjsProject/images/logo.png" alt="FinLabs India Logo" />
+          {/* <span>finlabs</span> */}
+>>>>>>> 74a785296173a478e8d200e132caa33618d68be7
         </div>
         <nav className="nav-links">
           <div className="dropdown">Products &#9662;</div>
