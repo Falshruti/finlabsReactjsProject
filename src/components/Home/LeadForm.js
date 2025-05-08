@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './LeadForm.css';
+import axios from 'axios';
 
-function LeadForm() {
+const LeadForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,63 +14,50 @@ function LeadForm() {
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      if (res.ok) {
-        alert('Lead submitted successfully');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          website: '',
-          product: '',
-          solution: '',
-          service: ''
-        });
-      } else {
-        alert('Failed to submit');
-      }
-    } catch (error) {
-      console.error('Error:', error);
+      await axios.post('http://localhost:5000/api/submit', formData);
+      alert('Lead saved!');
+    } catch (err) {
+      console.error('Submit error:', err);
+      alert('Error saving lead.');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="lead-form">
-      <input name="name" value={formData.name} onChange={handleChange} placeholder="Full Name" required />
-      <input name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
-      <input name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" required />
-      <input name="company" value={formData.company} onChange={handleChange} placeholder="Company Name" />
-      <input name="website" value={formData.website} onChange={handleChange} placeholder="Website" />
-      <select name="product" value={formData.product} onChange={handleChange} required>
+    <form onSubmit={handleSubmit}>
+      <input name="name" required onChange={handleChange} placeholder="Your Name" />
+      <input name="email" required onChange={handleChange} placeholder="Your Email" />
+      <input name="phone" required onChange={handleChange} placeholder="Phone Number" />
+      <input name="company" onChange={handleChange} placeholder="Company Name" />
+      <input name="website" onChange={handleChange} placeholder="Website" />
+
+      <select name="product" required onChange={handleChange}>
         <option value="">Select Product</option>
-        <option value="None">None</option>
         <option value="Product A">Product A</option>
+        <option value="Product B">Product B</option>
       </select>
-      <select name="solution" value={formData.solution} onChange={handleChange} required>
+
+      <select name="solution" required onChange={handleChange}>
         <option value="">Select Solution</option>
-        <option value="None">None</option>
-        <option value="Solution A">Solution A</option>
+        <option value="Solution X">Solution X</option>
+        <option value="Solution Y">Solution Y</option>
       </select>
-      <select name="service" value={formData.service} onChange={handleChange} required>
+
+      <select name="service" required onChange={handleChange}>
         <option value="">Select Service</option>
-        <option value="None">None</option>
-        <option value="Service A">Service A</option>
+        <option value="Service 1">Service 1</option>
+        <option value="Service 2">Service 2</option>
       </select>
+
       <button type="submit">Submit</button>
     </form>
   );
-}
+};
 
 export default LeadForm;
